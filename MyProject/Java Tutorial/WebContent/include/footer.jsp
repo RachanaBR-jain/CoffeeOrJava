@@ -4,7 +4,7 @@
 		 		<div class="col-lg-4">
 		 			<h4>About</h4>
 		 			<div class="hline-w"></div>
-		 			<p>Java Learners is the hub of java programming languages in which you have various java programming languages concepts such as core java tutorial, sql, javascript, android, ajax, cloud computing tutorial, servlet, JSP, EJB, JAXB, Hibernate, Spring, Java Mail, Design Pattern with basic program git link</p>
+		 			<p>CoffeeOrJava is the hub of java programming languages in which you have various java programming languages concepts such as core java tutorial, sql, javascript, android, ajax, cloud computing tutorial, servlet, JSP, EJB, JAXB, Hibernate, Spring, Java Mail, Design Pattern with basic program git link</p>
 		 		</div>
 		 		<div class="col-lg-4">
 		 			<h4>Social Links</h4>

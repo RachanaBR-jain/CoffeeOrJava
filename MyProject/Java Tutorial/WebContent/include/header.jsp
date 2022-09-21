@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="${pageContext.request.contextPath}/site?page=home">SOLID.</a>
+          <a class="navbar-brand" href="${pageContext.request.contextPath}/site?page=home">CoffeOrJava</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
