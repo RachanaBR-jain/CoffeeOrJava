@@ -33,12 +33,26 @@ public class OperationController extends HttpServlet {
 		case "adduser":
 			addUserFormLoader(request, response);
 			break;
+		case "updateuser":
+			UpdateUserFormLoader(request, response);
+			break;
 		default:
 			errorPage(request, response);
 		}
 
 	}
 	
+	private void UpdateUserFormLoader(HttpServletRequest request, HttpServletResponse response) {
+		request.setAttribute("title", "Update User");
+		try {
+			request.getRequestDispatcher("updateUser.jsp").forward(request, response);
+		} catch (ServletException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String operation = request.getParameter("form");
@@ -49,6 +63,12 @@ public class OperationController extends HttpServlet {
         addUserOperation(newUser);
         listUsers(request, response);
         break;
+		case "updateuseroperation":
+			User updatedUser = new User(Integer.parseInt(request.getParameter("usersId")),
+					request.getParameter("username"), request.getParameter("email"));
+			updateUserOperation(dataSource, updatedUser);
+			listUsers(request, response);
+			break;
 		default:
 			errorPage(request, response);
 			break;
@@ -56,6 +76,12 @@ public class OperationController extends HttpServlet {
 	}
 	
 	
+	private void updateUserOperation(DataSource dataSource2, User updatedUser) {
+		new UsersModel().updateUser(dataSource,updatedUser);
+		return;
+		
+	}
+
 	private void addUserOperation(User newUser) {
 		new UsersModel().addUser(dataSource, newUser);
 		return; 
